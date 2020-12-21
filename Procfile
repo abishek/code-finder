@@ -1,1 +1,1 @@
-web: poetry run uvicorn main:app
+web: source $HOME/.poetry/env && poetry run uvicorn main:app
