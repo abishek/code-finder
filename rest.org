@@ -1,0 +1,22 @@
+# -*- restclient -*-
+
+# If this gets the hello world message, then we are all set
+GET http://localhost:8000
+
+
+# Test a simple analysis test
+POST http://localhost:8000/analyse
+Content-Type: application/json
+
+{
+    "language": "python",
+    "code": [
+    "def say_hello(name='world')",
+    "    print(f'hello {name}.')",
+    "",
+    "",
+    "def main():",
+    "    say_hello('abishek')",
+    ""
+    ]
+}
