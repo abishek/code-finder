@@ -6,7 +6,7 @@ authors = ["Abishek Goda <abishek.goda@hey.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.8.6"
 fastapi = "^0.62.0"
 uvicorn = "^0.13.1"
 lizard = "^1.17.7"
