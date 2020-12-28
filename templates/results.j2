@@ -1,0 +1,28 @@
+{% extends "base.j2" %}
+{% block content %}
+  <h2>Static Analysis Results</h2>
+  <pre><code>{{code}}</code></pre>
+  <table class="u-full-width">
+    <tbody>
+      {% for heading, value in rows.items() %}
+        <tr>
+          <th>{{heading}}</th>
+          <td>{{value}}</td>
+        </tr>
+      {% endfor %}
+      {% if functions %}
+        {% for name, attrs in functions %}
+          <tr>
+            <th colspan=2 style="text-align:center;">{{name}}</th>
+          </tr>
+          {% for heading, value in attrs.items() %}
+            <tr>
+              <th>{{heading}}</th>
+              <td>{{value}}</td>
+            </tr>
+          {% endfor %}
+        {% endfor %}
+      {% endif %}
+    </tbody>
+  </table>
+{% endblock %}
