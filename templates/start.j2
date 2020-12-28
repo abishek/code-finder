@@ -1,0 +1,14 @@
+{% extends "base.j2" %}
+{% block content %}
+  <h2>Welcome to Code Finder</h2>
+  <p>What we have at the moment is a simple complexity analysis tool.</p>
+  <form method="POST" action="/analyseform">
+    <div class="row">
+      <select class="u-full-width" name="language">
+        <option value="python">Python</option>
+      </select>
+      <textarea name="code" class="u-full-width" rows=8></textarea>
+      <button class="primary" type="submit">Analyse</button>
+    </div>
+  </form>
+{% endblock %}
