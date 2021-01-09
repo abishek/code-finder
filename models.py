@@ -20,6 +20,11 @@ class SourceCodeString(BaseModel):
     code: typing.List[str]
 
 
+class SearchString(BaseModel):
+    language: str
+    query_text: str
+
+
 class QueryString(Model):
     """This is the database model capturing the user submitted queries."""
     id = fields.IntField(pk=True)

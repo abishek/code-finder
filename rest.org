@@ -20,3 +20,13 @@ Content-Type: application/json
     ""
     ]
 }
+
+
+# Test search logic
+POST http://localhost:8000/search-code
+Content-Type: application/json
+
+{
+    "language": "python",
+    "query_text": "split string"
+}
